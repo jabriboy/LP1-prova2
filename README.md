@@ -1,6 +1,13 @@
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+diagrama de classes 1.1
+
+![image](https://user-images.githubusercontent.com/62043357/201435980-ecda651b-f448-4bdd-88af-dbbf8551b906.png)
+
+diagramas de classes 2.1/5
+
+![image](https://user-images.githubusercontent.com/62043357/201436091-506ede1d-0e59-46b9-8bdf-139113a82299.png)
+
 
 ## Folder Structure
 
