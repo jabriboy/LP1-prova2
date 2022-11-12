@@ -2,7 +2,8 @@
 
 diagrama de classes
 
-![image](../Diagrama%20sem%20nome-P%C3%A1gina-4.drawio.png)
+<img width="449" alt="image" src="https://user-images.githubusercontent.com/62043357/201498006-a47b3c35-29a7-40e1-bbd2-81d2a5ef226a.png">
+
 
 ## Folder Structure
 
