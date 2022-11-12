@@ -2,7 +2,7 @@
 
 diagrama de classes
 
-![image](https://drive.google.com/file/d/1v3hz5nsCWB2GYsAqygKxLEean-nFbNjq/view?usp=sharing)
+![image](../Diagrama%20sem%20nome-P%C3%A1gina-4.drawio.png)
 
 ## Folder Structure
 
