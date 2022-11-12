@@ -1,13 +1,8 @@
 ## Getting Started
 
-diagrama de classes 1.1
+diagrama de classes
 
-![image](https://user-images.githubusercontent.com/62043357/201435980-ecda651b-f448-4bdd-88af-dbbf8551b906.png)
-
-diagramas de classes 2.1/5
-
-![image](https://user-images.githubusercontent.com/62043357/201436091-506ede1d-0e59-46b9-8bdf-139113a82299.png)
-
+![image](https://drive.google.com/file/d/1v3hz5nsCWB2GYsAqygKxLEean-nFbNjq/view?usp=sharing)
 
 ## Folder Structure
 
