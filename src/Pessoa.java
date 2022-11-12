@@ -1,11 +1,11 @@
 public class Pessoa {
     public int id;
     public String nome;
-    public int tipoPessoa;
+    public String tipoPessoa;
 
     public Pessoa(){}
 
-    public Pessoa(int id, String nome, int tipoPessoa){
+    public Pessoa(int id, String nome, String tipoPessoa){
         this.id = id;
         this.nome = nome;
         this.tipoPessoa = tipoPessoa;

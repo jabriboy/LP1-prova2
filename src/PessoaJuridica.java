@@ -1,79 +1,53 @@
-public class PessoaJuridica extends Pessoa implements Imposto {
+import java.util.Scanner;
+
+public class PessoaJuridica extends Pessoa{
     public String cnpj;
     public String inscricaoEstadual;
+    public Juridica juridica;
+
+    Scanner sc = new Scanner(System.in);
 
     public PessoaJuridica(){}
 
-    public PessoaJuridica(int id, String nome, int tipoPessoa){
-        super(id, nome, tipoPessoa = 0);
+    public PessoaJuridica(int id, String nome, String tipoPessoa){
+        super(id, nome, tipoPessoa);
     }
 
-    public PessoaJuridica(int id, String nome, int tipoPessoa, String cnpj, String inscricaoEstadual){
-        super(id, nome, tipoPessoa = 0);
+    public PessoaJuridica(int id, String nome, String tipoPessoa, String cnpj, String inscricaoEstadual, Juridica juridica){
+        super(id, nome, tipoPessoa);
         this.cnpj = cnpj;
         this.inscricaoEstadual = inscricaoEstadual;
+        this.juridica = juridica;
     }
 
-    @Override
     public float calculaIss(float valorNotaFiscal) {
         float iss;
         iss = (float) (valorNotaFiscal * 0.05);
+
         return iss;
     }
 
-    @Override
-    public float calculaLr(float lucro) {
-        float lucroReal;
-        lucroReal = (float) (lucro * 0.15);
-        return lucroReal;
+    public float calculaLr() {
+        float lr;
+        lr = (float) (this.juridica.lucro * 0.15);
+
+        return lr;
     }
 
-    @Override
-    public float calculaInss(float lucro) {
-        float inss;
-        inss = (float) (lucro * 0.09);
-        return inss;
-    }
-
-    @Override
-    public int calculaAliquota(float lucro){
-        int aliquota;
-
-        if(lucro <= 20000){
-            aliquota = 10;
-        }
-        else if(lucro < 40000){
-            aliquota = 20;
-        }
-        else{
-            aliquota = 30;
-        }
-
-        return aliquota;
-    }
-
-    @Override
-    public float calculaIr(float lucro){
-        float ir;
-        float inss;
-        int aliquota = calculaAliquota(lucro);
-
-        inss = calculaInss(lucro);
-        ir = (lucro - inss) * (aliquota/100);
-        return ir;
-    }
-
-    public float calculaImposto(float valorNotaFiscal, float lucro){
-        float iss, inss, lucroReal, ir, imposto;
+    public void calculaImpostos() {
+        float iss, lr, inss, ir, valorNotaFiscal;
+        System.out.println("Valor das notas fiscais: ");
+        valorNotaFiscal = sc.nextFloat();
 
         iss = calculaIss(valorNotaFiscal);
-        inss =  calculaInss(lucro);
-        lucroReal = calculaLr(lucro);
-        ir = calculaIr(lucro);
+        lr = calculaLr();
+        inss = this.juridica.calculaInss();
+        ir = this.calculaLr();
 
-        imposto = (iss + inss + lucroReal + ir);
-
-        return imposto;
+        System.out.println("ISS: "+iss);
+        System.out.println("Lucro Real: "+lr);
+        System.out.println("INSS: "+inss);
+        System.out.println("Imposto de Renda: "+ir);
     }
 
 }
