@@ -36,7 +36,7 @@ public class PessoaJuridica extends Pessoa{
 
     public void calculaImpostos() {
         float iss, lr, inss, ir, valorNotaFiscal;
-        System.out.println("Valor das notas fiscais: ");
+        System.out.print("Valor das notas fiscais: ");
         valorNotaFiscal = sc.nextFloat();
 
         iss = calculaIss(valorNotaFiscal);
@@ -44,6 +44,7 @@ public class PessoaJuridica extends Pessoa{
         inss = this.juridica.calculaInss();
         ir = this.calculaLr();
 
+        System.out.println("\n");
         System.out.println("ISS: "+iss);
         System.out.println("Lucro Real: "+lr);
         System.out.println("INSS: "+inss);
